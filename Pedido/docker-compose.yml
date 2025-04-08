@@ -1,0 +1,11 @@
+
+services:
+    db:
+        image: mysql:5.7
+        container_name: pedidos-mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: pedidosdb
+        ports:
+            - "3306:3306"    
