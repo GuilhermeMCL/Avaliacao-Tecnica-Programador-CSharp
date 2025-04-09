@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pedido.Domain.Entity
 {
-    public  class Pedido
+    public  class Pedidos
     {
         public int id { get; set; }
         public string NomeCliente { get; set; }

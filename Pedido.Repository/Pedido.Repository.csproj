@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Pedido.Domain\Pedido.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NovaPasta\" />
+  </ItemGroup>
+
 </Project>
