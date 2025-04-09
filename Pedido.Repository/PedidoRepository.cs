@@ -1,64 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pedido.Domain.Entity;
+﻿using Pedido.Domain.Entities;
 using Pedido.Repository.Context;
+using MySql.Data.MySqlClient;
 
 namespace Pedido.Repository
 {
     public class PedidoRepository
     {
         private readonly DbContext _context;
+
         public PedidoRepository()
         {
             _context = new DbContext();
         }
 
-        public int CriarPedido(Pedidos pedido)
+        public int CriarPedido(Pedido.Domain.Entities.Pedido pedido)
         {
             int pedidoId;
 
-            using(var conexao = _context.ObterConexao())
+            using (var conn = _context.CriarConexao())
             {
-                using (var cmd = conexao.CreateCommand())
-                {
-                    cmd.CommandText = "INSERT INTO Pedidos (NomeCliente, Mesa, Status) VALUES (@NomeCliente, @Mesa, @Status); SELECT LAST_INSERT_ID();";
-                    cmd.Parameters.AddWithValue("@NomeCliente", pedido.NomeCliente);
-                    cmd.Parameters.AddWithValue("@Mesa", pedido.Mesa);
-                    cmd.Parameters.AddWithValue("@Status", pedido.Status);
-                    pedidoId = Convert.ToInt32(cmd.ExecuteScalar());
-                }
+                var cmd = new MySqlCommand("INSERT INTO pedidos (nome_solicitante, mesa, status) VALUES (@nome, @mesa, @status); SELECT LAST_INSERT_ID();", conn);
+                cmd.Parameters.AddWithValue("@nome", pedido.NomeSolicitante);
+                cmd.Parameters.AddWithValue("@mesa", pedido.Mesa);
+                cmd.Parameters.AddWithValue("@status", pedido.Status);
+                pedidoId = Convert.ToInt32(cmd.ExecuteScalar());
 
                 foreach (var item in pedido.Itens)
                 {
-                    using (var cmd = conexao.CreateCommand())
-                    {
-                        cmd.CommandText = "INSERT INTO PedidoItem (PedidoId, ProdutoId, Quantidade) VALUES (@PedidoId, @ProdutoId, @Quantidade)";
-                        cmd.Parameters.AddWithValue("@PedidoId", pedidoId);
-                        cmd.Parameters.AddWithValue("@ProdutoId", item.ProdutoId);
-                        cmd.Parameters.AddWithValue("@Quantidade", item.Quantidade);
-                        cmd.ExecuteNonQuery();
-                    }
+                    var cmdItem = new MySqlCommand("INSERT INTO pedido_itens (pedido_id, produto_id, quantidade) VALUES (@pedidoId, @produtoId, @qtd)", conn);
+                    cmdItem.Parameters.AddWithValue("@pedidoId", pedidoId);
+                    cmdItem.Parameters.AddWithValue("@produtoId", item.ProdutoId);
+                    cmdItem.Parameters.AddWithValue("@qtd", item.Quantidade);
+                    cmdItem.ExecuteNonQuery();
                 }
-
             }
+
             return pedidoId;
         }
 
-
-        public void AtualizarStatusPedido(int pedidoId, string status)
+        public void AtualizarStatus(int pedidoId, string novoStatus)
         {
-            using (var conexao = _context.ObterConexao())
+            using (var conn = _context.CriarConexao())
             {
-                using (var cmd = conexao.CreateCommand())
-                {
-                    cmd.CommandText = "UPDATE Pedidos SET Status = @Status WHERE id = @PedidoId";
-                    cmd.Parameters.AddWithValue("@Status", status);
-                    cmd.Parameters.AddWithValue("@PedidoId", pedidoId);
-                    cmd.ExecuteNonQuery();
-                }
+                var cmd = new MySqlCommand("UPDATE pedidos SET status = @status WHERE id = @id", conn);
+                cmd.Parameters.AddWithValue("@status", novoStatus);
+                cmd.Parameters.AddWithValue("@id", pedidoId);
+                cmd.ExecuteNonQuery();
             }
         }
     }

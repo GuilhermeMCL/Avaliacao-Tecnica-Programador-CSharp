@@ -1,0 +1,12 @@
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\bin\Debug\net8.0\Pedido.Domain.deps.json
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\bin\Debug\net8.0\Pedido.Domain.dll
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\bin\Debug\net8.0\Pedido.Domain.pdb
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\Pedido.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\Pedido.Domain.AssemblyInfoInputs.cache
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\Pedido.Domain.AssemblyInfo.cs
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\Pedido.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\Pedido.Domain.sourcelink.json
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\Pedido.Domain.dll
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\refint\Pedido.Domain.dll
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\Pedido.Domain.pdb
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Domain\obj\Debug\net8.0\ref\Pedido.Domain.dll

@@ -1,0 +1,16 @@
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\bin\Debug\net8.0\Pedido.Repository.deps.json
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\bin\Debug\net8.0\Pedido.Repository.dll
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\bin\Debug\net8.0\Pedido.Repository.pdb
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\bin\Debug\net8.0\Pedido.Domain.dll
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\bin\Debug\net8.0\Pedido.Domain.pdb
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.csproj.AssemblyReference.cache
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.AssemblyInfoInputs.cache
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.AssemblyInfo.cs
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.sourcelink.json
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.R.3D119EB3.Up2Date
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.dll
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\refint\Pedido.Repository.dll
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\Pedido.Repository.pdb
+C:\Users\Guilherme\Desktop\CSharp\Pedido\Pedido.Repository\obj\Debug\net8.0\ref\Pedido.Repository.dll
